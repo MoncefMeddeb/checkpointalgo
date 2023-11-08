@@ -1,0 +1,24 @@
+ALGORITHM Checkpoint
+VAR
+    s:STRING;
+    l,nw,nv:INTEGER:=0;
+    
+
+BEGIN
+    WHILE (s<>".") DO
+        read(s);
+        l:=l+1;//length of the sentence
+        IF (s=" ") THEN
+            nw:=nw+1;
+        END_IF
+        ELSE://The number of vowels in the sentence
+            IF (s="a"or"e"or"i"or"o"or"u"or"y") THEN
+                nv:=nv+1;
+            END_IF
+            
+    END_WHILE
+    nw:=nw+1;//the final number of words in the sentence
+    write("The length of the sentence:",l)
+    write("The number of words in the sentence:",nw)
+    write("The number of vowels in the sentence:",nv)
+END
